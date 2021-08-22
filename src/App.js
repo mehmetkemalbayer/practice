@@ -17,14 +17,14 @@ function App() {
     setError(undefined);
   };
   return (
-    <div>
+    <>
       {error && <ErrorModal error={error} onClose={closeErrorHandler} />}
       <AddUser
         onNewUserAdded={newUsersAdditionHandler}
         onError={errorHandler}
       ></AddUser>
       <UserList users={users}></UserList>
-    </div>
+    </>
   );
 }
 
